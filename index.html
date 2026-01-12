@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJS7TEJF79"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KJS7TEJF79');
+    </script>
+
+
+
+
+    
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -78,13 +92,13 @@
         </div>
         
         <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-            <a href="#" onclick="showSection('home')" class="hover:text-black transition duration-300">Features</a>
+            <a href="#" onclick="showSection('features')" class="hover:text-black transition duration-300">Features</a>
             <a href="#" onclick="showSection('pricing')" class="hover:text-black transition duration-300">Pricing</a>
         </div>
 
         <div class="flex items-center space-x-6">
             <a href="https://forms.gle/1JaXL6ALRoAxv6ns8" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-slate-800 transition duration-300 ease-in-out hover:scale-105 transform inline-block">
-                Join us
+                Join Us
             </a>
         </div>
     </nav>
@@ -751,7 +765,7 @@
     </section>
 
     <!-- ================= 新增：介绍板块 (Why top creators are switching) ================= -->
-    <section class="pb-32 px-4">
+    <section id="features" class="pb-32 px-4">
         <div class="max-w-7xl mx-auto">
             <!-- 标题区域 -->
             <div class="text-center mb-16">
@@ -821,7 +835,7 @@
             <div class="max-w-4xl mx-auto text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900">Pricing that scales with you</h2>
                 <p class="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                    Start for free with our complete operating system. Upgrade to keep more profit.
+                    Start for free with our complete operating system.<br>Upgrade to keep more profit.
                 </p>
             </div>
 
@@ -1070,6 +1084,6 @@
             contactModal.classList.remove('hidden');
         }
     </script>
-
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
