@@ -82,10 +82,38 @@
 
     <!-- 导航栏 -->
     <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="flex items-center space-x-2">
+        <!-- <div class="flex items-center space-x-2">
             <div class="bg-black text-white w-8 h-8 flex items-center justify-center rounded-lg font-bold text-xl">S</div>
             <span class="text-xl font-bold tracking-tight text-slate-900">SponsorDeck</span>
         </div>
+         -->
+        <div class="flex items-center space-x-2.5 group cursor-pointer select-none">
+            <!-- Logo Icon: 保持精致的品牌渐变图标 -->
+            <div class="relative w-8 h-8 bg-gradient-to-br from-[#6366f1] via-[#8b5cf6] to-[#d946ef] rounded-[10px] flex items-center justify-center shadow-[0_4px_12px_-2px_rgba(99,102,241,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_6px_20px_-4px_rgba(99,102,241,0.4)]">
+                <div class="absolute top-[6px] left-1/2 -translate-x-1/2 w-[3.5px] h-[4.5px] bg-white rounded-t-full z-20"></div>
+                <span class="text-white font-black text-[18px] leading-none z-10 pt-[0.5px]">S</span>
+                <div class="absolute bottom-[7px] left-1/2 -translate-x-1/2 w-[3.5px] h-[4.5px] bg-white rounded-b-full z-20"></div>
+            </div>
+
+            <!-- 文字组合部分 -->
+            <div class="flex items-center text-[22px] tracking-tight">
+                <!-- Sponsor: 亮色品牌渐变 (蓝->紫->粉) -->
+                <span class="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#6366f1] via-[#a855f7] to-[#ec4899]">
+                    Sponsor
+                </span>
+                
+                <!-- Deck: 深色系渐变 (深紫 -> 极深蓝黑 -> 纯黑) -->
+                <!-- 这里的 from-[#4c1d95] 是关键，它比 Sponsor 的末尾颜色深，但又属于同一色系 -->
+                <span class="font-[900] ml-[-0.2px] bg-clip-text text-transparent bg-gradient-to-r from-[#4c1d95] via-[#1e1b4b] to-[#020617]">
+                    Deck
+                </span>
+            </div>
+        </div>
+
+
+
+
+
         
         <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
             <a href="#" onclick="showSection('features')" class="hover:text-black transition duration-300">Features</a>
@@ -107,12 +135,12 @@
         </div>
 
         <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl">
-           Your Shoppable Media Kit. <br>
+           Your Shoppable Media Kit <br>
             <span class="gradient-text">SponsorDeck</span>
         </h1>
 
         <p class="mt-8 text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed">
-            The operating system for professional creators. Send quotes, secure payments via Escrow, and track your income in one place.
+            The Operating System for Brand Deals.Your media kit, chat, and payments—all in one link.
         </p>
 
         <div class="mt-12 w-full max-w-xl">
