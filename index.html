@@ -81,7 +81,7 @@
 <body class="antialiased">
 
     <!-- 导航栏 -->
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+    <nav class="relative flex items-center px-8 py-6">
         <!-- <div class="flex items-center space-x-2">
             <div class="bg-black text-white w-8 h-8 flex items-center justify-center rounded-lg font-bold text-xl">S</div>
             <span class="text-xl font-bold tracking-tight text-slate-900">SponsorDeck</span>
@@ -99,31 +99,23 @@
             <div class="flex items-center text-[22px] tracking-tight">
                 <!-- Sponsor: 亮色品牌渐变 (蓝->紫->粉) -->
                 <span class="font-[900] bg-clip-text text-transparent bg-gradient-to-r from-[#6366f1] via-[#a855f7] to-[#ec4899]">
-                    Sponsor
+                    SponsorDeck
                 </span>
                 
                 <!-- Deck: 深色系渐变 (深紫 -> 极深蓝黑 -> 纯黑) -->
                 <!-- 这里的 from-[#4c1d95] 是关键，它比 Sponsor 的末尾颜色深，但又属于同一色系 -->
-                <span class="font-[900] ml-[-0.2px] bg-clip-text text-transparent bg-gradient-to-r from-[#4c1d95] via-[#1e1b4b] to-[#020617]">
+                <!-- <span class="font-[900] ml-[-0.2px] bg-clip-text text-transparent bg-gradient-to-r from-[#4c1d95] via-[#1e1b4b] to-[#020617]">
                     Deck
-                </span>
+                </span> -->
             </div>
         </div>
 
-
-
-
-
-        
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-            <a href="#" onclick="showSection('features')" class="hover:text-black transition duration-300">Features</a>
-            <a href="#" onclick="showSection('pricing')" class="hover:text-black transition duration-300">Pricing</a>
-        </div>
-
-        <div class="flex items-center space-x-6">
-            <a href="https://forms.gle/1JaXL6ALRoAxv6ns8" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-slate-800 transition duration-300 ease-in-out hover:scale-105 transform inline-block">
-                Join Us
-            </a>
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#" onclick="showSection('features')" class="hover:text-black transition duration-300">Features</a>
+                <a href="#" onclick="showSection('code-section')" class="hover:text-black transition duration-300">Join Us</a>
+                <a href="#" onclick="showSection('pricing')" class="hover:text-black transition duration-300">Pricing</a>
+            </div>
         </div>
     </nav>
 
@@ -134,8 +126,8 @@
             <span class="text-indigo-700 text-xs font-semibold tracking-wide">Waitlist Open for Creators</span>
         </div>
 
-        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl">
-           Your Shoppable Media Kit <br>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-wide leading-tight mx-auto text-center" style="word-spacing: 0.6em; white-space: nowrap;">
+           Your Shoppable Media Kit<br> 
             <span class="gradient-text">SponsorDeck</span>
         </h1>
 
@@ -956,7 +948,7 @@
 
             <!-- ================= Code Section ================= -->
             <div class="mt-16">
-                <section class="relative w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#2e1065] via-[#1e1b4b] to-[#172554] shadow-2xl">
+                <section id="code-section" class="relative w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#2e1065] via-[#1e1b4b] to-[#172554] shadow-2xl">
                     <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                         <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/20 blur-[100px]"></div>
                         <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/20 blur-[100px]"></div>
