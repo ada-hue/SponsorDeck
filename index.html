@@ -53,10 +53,24 @@
             background-color: #ffffff;
             background: radial-gradient(circle at bottom, #f8fafc 0%, #ffffff 50%);
         }
+        /* 导航栏响应式 */
+        nav {
+            padding: clamp(16px, 4vw, 24px) clamp(12px, 4vw, 32px);
+        }
+        nav .text-\[22px\] {
+            font-size: clamp(16px, 4vw, 22px);
+        }
         .gradient-text {
             background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        /* Hero 部分响应式 */
+        main {
+            padding-top: clamp(40px, 8vw, 80px) !important;
+            padding-bottom: clamp(40px, 8vw, 128px) !important;
+            padding-left: clamp(12px, 4vw, 16px) !important;
+            padding-right: clamp(12px, 4vw, 16px) !important;
         }
         .feature-card {
             transition: all 0.3s ease;
@@ -188,21 +202,24 @@
 
                 .wrapper {
                     position: relative;
-                    width: 1100px;
-                    height: 700px;
+                    width: 100%;
+                    max-width: 1100px;
+                    height: auto;
+                    margin: 0 auto;
+                    padding: 0 20px;
                 }
 
                 /* 电脑端主窗口 */
                 .dashboard-window {
-                    width: 1000px;
-                    height: 650px;
+                    width: 100%;
+                    height: auto;
+                    min-height: 650px;
                     background: #fff;
                     border-radius: 24px;
                     display: flex;
+                    flex-direction: column;
                     box-shadow: var(--card-shadow);
-                    position: absolute;
-                    bottom: 25px;
-                    left: 0;
+                    position: relative;
                     overflow: hidden;
                     z-index: 1;
                 }
@@ -221,10 +238,12 @@
                 .dot.g { background: #27c93f; }
 
                 .sidebar {
-                    width: 220px;
+                    width: 100%;
+                    max-width: 220px;
                     background: #fff;
                     border-right: 1px solid #f1f5f9;
                     padding: 90px 24px 20px;
+                    display: none;
                 }
                 .menu-label {
                     font-size: 11px;
@@ -253,12 +272,13 @@
 
                 .main-content {
                     flex: 1;
-                    padding: 60px 50px;
+                    padding: 40px 30px;
                     background: #fafafa;
                     position: relative;
+                    width: 100%;
                 }
                 .main-content h1 {
-                    font-size: 34px;
+                    font-size: clamp(24px, 5vw, 34px);
                     font-weight: 800;
                     margin-bottom: 25px;
                     color: #0f172a;
@@ -269,8 +289,10 @@
                     color: #fff;
                     padding: 35px 40px;
                     border-radius: 28px;
-                    width: 350px;
-                    height: 205px;
+                    width: 100%;
+                    max-width: 350px;
+                    height: auto;
+                    min-height: 205px;
                     position: relative;
                     margin-bottom: 35px;
                     overflow: hidden;
@@ -290,8 +312,10 @@
                     background: #fff;
                     padding: 35px 40px;
                     border-radius: 28px;
-                    width: 350px;
-                    height: 205px;
+                    width: 100%;
+                    max-width: 350px;
+                    height: auto;
+                    min-height: 205px;
                     position: relative;
                     overflow: hidden;
                     z-index: 2;
@@ -352,7 +376,8 @@
 
                 .trans-item {
                     background: #fff;
-                    width: 610px; 
+                    width: 100%;
+                    max-width: 610px;
                     padding: 18px 24px;
                     border-radius: 20px;
                     display: flex;
@@ -360,6 +385,8 @@
                     margin-bottom: 12px;
                     box-shadow: 0 2px 10px rgba(0,0,0,0.02);
                     border: 1px solid #f8fafc;
+                    flex-wrap: wrap;
+                    gap: 10px;
                 }
                 .trans-icon {
                     width: 46px; height: 46px; border-radius: 14px; margin-right: 20px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;
@@ -618,6 +645,194 @@
                 }
                 .badge-t { font-size: 11px; color: #94a3b8; font-weight: 800; } 
                 .badge-v { font-size: 20px; font-weight: 800; color: #10b981; }
+
+                /* ========== 响应式设计 ========== */
+                @media (max-width: 1024px) {
+                    .wrapper {
+                        padding: 0 15px;
+                    }
+                    .main-content {
+                        padding: 30px 20px;
+                    }
+                    .balance-card,
+                    .stats-card {
+                        max-width: 100%;
+                    }
+                    .trans-item {
+                        max-width: 100%;
+                    }
+                    .phone-mockup {
+                        position: relative;
+                        right: auto;
+                        top: auto;
+                        width: 100%;
+                        max-width: 295px;
+                        height: 595px;
+                        margin: 40px auto;
+                        transform: none;
+                        z-index: 1;
+                    }
+                    .dynamic-badge {
+                        position: relative;
+                        top: auto;
+                        right: auto;
+                        margin-top: 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        max-width: fit-content;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .wrapper {
+                        padding: 0 12px;
+                    }
+                    .dashboard-window {
+                        border-radius: 16px;
+                    }
+                    .main-content {
+                        padding: 20px 16px;
+                    }
+                    .main-content h1 {
+                        font-size: clamp(20px, 4vw, 28px);
+                        margin-bottom: 20px;
+                    }
+                    .window-controls {
+                        top: 16px;
+                        left: 16px;
+                    }
+                    .balance-card,
+                    .stats-card {
+                        max-width: 100%;
+                        padding: 25px 20px;
+                        min-height: auto;
+                    }
+                    .bal-val {
+                        font-size: 32px;
+                    }
+                    .trans-item {
+                        max-width: 100%;
+                        padding: 16px 16px;
+                        gap: 12px;
+                    }
+                    .trans-icon {
+                        width: 36px;
+                        height: 36px;
+                        flex-shrink: 0;
+                    }
+                    .chart-bar {
+                        height: 80px;
+                    }
+                    .recent-tag {
+                        margin-bottom: 12px;
+                    }
+                    
+                    div[style*="display: flex; gap: 20px"] {
+                        flex-direction: column !important;
+                        gap: 16px !important;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    body {
+                        font-size: 14px;
+                    }
+                    .wrapper {
+                        padding: 0 10px;
+                    }
+                    .dashboard-window {
+                        border-radius: 12px;
+                        min-height: auto;
+                    }
+                    .main-content {
+                        padding: 16px 12px;
+                    }
+                    .main-content h1 {
+                        font-size: clamp(18px, 5vw, 24px);
+                        margin-bottom: 16px;
+                    }
+                    .window-controls {
+                        display: none;
+                    }
+                    .sidebar {
+                        display: none !important;
+                    }
+                    .balance-card,
+                    .stats-card {
+                        max-width: 100%;
+                        padding: 20px 16px;
+                        border-radius: 16px;
+                        margin-bottom: 16px;
+                    }
+                    .bal-label {
+                        font-size: 10px;
+                    }
+                    .bal-val {
+                        font-size: 28px;
+                        margin-bottom: 12px;
+                    }
+                    .withdraw-btn {
+                        padding: 8px 16px;
+                        font-size: 12px;
+                    }
+                    .trans-item {
+                        padding: 14px 12px;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+                    .trans-icon {
+                        width: 32px;
+                        height: 32px;
+                        font-size: 14px;
+                        margin: 0;
+                    }
+                    .chart-bar {
+                        height: 60px;
+                        gap: 4px;
+                    }
+                    .bar {
+                        border-radius: 3px 3px 0 0;
+                    }
+                    .chart-labels {
+                        font-size: 8px;
+                    }
+                    .recent-tag {
+                        font-size: 9px;
+                    }
+                    .menu-label {
+                        font-size: 9px;
+                    }
+                    .nav-item {
+                        font-size: 13px;
+                        padding: 10px 12px;
+                    }
+
+                    /* 全局文本缩放 */
+                    h2 {
+                        font-size: clamp(24px, 6vw, 32px) !important;
+                    }
+                    h3 {
+                        font-size: clamp(18px, 5vw, 24px) !important;
+                    }
+                    p {
+                        font-size: clamp(14px, 3vw, 16px) !important;
+                    }
+
+                    /* 卡片间距优化 */
+                    .feature-card {
+                        padding: 24px 16px !important;
+                    }
+                    
+                    /* 动态徽章隐藏 */
+                    .dynamic-badge {
+                        display: none;
+                    }
+
+                    /* 输入框响应式 */
+                    input, button {
+                        font-size: 16px;
+                    }
+                }
             </style>
             
             <div class="wrapper">
@@ -852,11 +1067,11 @@
                 </div>
             </div>
 
-            <!-- 第二排卡片：与第一排相同大小，居中显示 -->
-            <div class="flex justify-center gap-6">
+            <!-- 第二排卡片：与第一排相同大小，使用网格布局 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:max-w-3xl mx-auto">
                 
                 <!-- Pro Storefront -->
-                <div class="bg-white border border-slate-100 p-8 rounded-[32px] feature-card shadow-sm max-w-sm">
+                <div class="bg-white border border-slate-100 p-8 rounded-[32px] feature-card shadow-sm">
                     <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-8">
                         <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
                     </div>
@@ -865,7 +1080,7 @@
                 </div>
 
                 <!-- Smart Wallet -->
-                <div class="bg-white border border-slate-100 p-8 rounded-[32px] feature-card shadow-sm max-w-sm">
+                <div class="bg-white border border-slate-100 p-8 rounded-[32px] feature-card shadow-sm">
                     <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-8">
                         <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
                     </div>
