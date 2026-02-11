@@ -1114,94 +1114,107 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-16">
-                <!-- Starter 卡片 -->
-                <div class="bg-white border border-slate-200 rounded-[40px] p-10 shadow-sm flex flex-col h-full">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Starter</h3>
-                        <div class="flex items-baseline">
-                            <span class="text-5xl font-bold text-slate-900">$0</span>
-                            <span class="text-slate-400 ml-2">/mo</span>
-                        </div>
-                        <p class="text-slate-500 mt-10 pb-6 border-b border-slate-100 text-sm">Everything you need to manage deals professionally.</p>
-                    </div>
-                    <ul class="space-y-5 mb-16">
-                        <li class="flex items-start space-x-3">
-                            <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-sm font-medium text-slate-600"><span class="font-bold text-slate-800">Full Workflow:</span> Chat, Contracts (IO), Escrow & Payouts</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-sm font-medium text-slate-600"><span class="font-bold text-slate-800">Order Calendar:</span> Track deadlines</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-sm font-medium text-slate-600"><span class="font-bold text-slate-800">Storefront:</span> sponsordeck.ai/yourname</span>
-                        </li>
-                        <li class="flex items-start space-x-3 opacity-60">
-                            <div class="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                                <span class="text-[10px] text-gray-500 font-bold">%</span>
-                            </div>
-                            <span class="text-sm font-medium text-slate-500">5% Transaction Fee</span>
-                        </li>
-                    </ul>
-                    <a href="https://forms.gle/1JaXL6ALRoAxv6ns8" class="w-full py-4 border-2 border-slate-900 rounded-2xl font-bold text-lg hover:bg-slate-50 transition active:scale-95 text-slate-900 inline-block text-center">
-                        Start Free Forever
-                    </a>
-                </div>
+            <!-- 在你的 HTML 头部或样式表中加入这段简单的动画代码 -->
+            <style>
+                @keyframes badge-pulse {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.1); } /* 放大 10% */
+                }
+                .animate-badge {
+                    animation: badge-pulse 2s ease-in-out infinite;
+                }
+            </style>
 
-                <!-- Pro Creator 卡片 -->
-                <div class="relative bg-[#11141d] text-white rounded-[40px] p-10 shadow-xl flex flex-col h-full transform md:scale-105">
-                    <!-- 最受欢迎标签 -->
-                    <div class="absolute -top-3 -right-3 bg-[#7c4dff] text-white text-[10px] font-bold px-4 py-1.5 rounded-lg uppercase tracking-wider shadow-lg">Most Popular</div>
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-16">
                     
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold mb-4">Pro Creator</h3>
-                        <div class="flex items-baseline">
-                            <span class="text-5xl font-bold">$29</span>
-                            <span class="text-slate-400 ml-2">/mo</span>
+                    <!-- Starter 卡片 (保持不变) -->
+                    <div class="bg-white border border-slate-200 rounded-[40px] p-10 shadow-sm flex flex-col">
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold mb-4 text-slate-900">Starter</h3>
+                            <div class="flex items-baseline mb-6">
+                                <span class="text-5xl font-bold text-slate-900">$0</span>
+                                <span class="text-slate-400 ml-2">/mo</span>
+                            </div>
+                            <p class="text-slate-500 text-sm h-10 flex items-center border-b border-slate-100 w-full">Professionalize your workflow.</p>
                         </div>
-                        <p class="text-slate-400 mt-6 text-sm font-medium leading-relaxed">
-                            Billed annually ($240/yr). Or $39 monthly.
-                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <span class="text-[14px] text-slate-600 leading-snug"><span class="font-bold text-slate-900">24/7 AI Negotiator:</span> Automates inquiries & proactively upsells brands.</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                <span class="text-[14px] text-slate-600 leading-snug"><span class="font-bold text-slate-900">Escrow Protection:</span> Upfront deposits & guaranteed payouts.</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                <span class="text-[14px] text-slate-600 leading-snug"><span class="font-bold text-slate-900">Structured Approvals:</span> Prevents scope creep and free work.</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                                <span class="text-[14px] text-slate-600 leading-snug"><span class="font-bold text-slate-900">Shoppable Storefront:</span> Brands click to start AI negotiations immediately.</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                                <span class="text-[14px] text-slate-600 leading-snug"><span class="font-bold text-slate-900">1:1 Upsell Split:</span> Keep half of all AI-negotiated extra value.</span>
+                            </li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="#" class="block w-full py-4 border-2 border-slate-900 rounded-2xl font-bold text-lg hover:bg-slate-50 transition text-slate-900 text-center">
+                                Start Free Forever
+                            </a>
+                            <p class="text-center text-transparent text-[11px] mt-4 select-none">Placeholder</p>
+                        </div>
                     </div>
 
-                    <div class="w-full h-px bg-slate-800 mb-8"></div>
-
-                    <ul class="space-y-6 mb-10 flex-1">
-                        <li class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    <!-- Pro Creator 卡片 (黑色底板放大) -->
+                    <div class="relative bg-[#0f1219] text-white rounded-[44px] px-12 py-14 shadow-2xl flex flex-col z-10 md:-my-4 md:-mx-2">
+                        
+                        <!-- 修改点：放大标签字号 text-[12px]，增加内边距 px-5 py-2，并加入 animate-badge 动画类 -->
+                        <div class="absolute -top-4 -right-4 bg-[#7c4dff] text-white text-[12px] font-extrabold px-5 py-2 rounded-xl uppercase tracking-widest shadow-xl animate-badge">
+                            Most Popular
+                        </div>
+                        
+                        <div class="mb-8 -mt-4">
+                            <h3 class="text-2xl font-bold mb-4">Pro Creator</h3>
+                            <div class="flex items-baseline mb-6">
+                                <span class="text-5xl font-bold">$29</span>
+                                <span class="text-slate-400 ml-2">/mo</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-sm font-bold">0% Transaction Fee</span>
-                                <span class="bg-slate-800 text-[10px] text-slate-400 px-2 py-0.5 rounded border border-slate-700">Save 5%</span>
-                            </div>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-6 h-6 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                            <span class="text-sm font-bold text-slate-200">Demand Square: <span class="font-normal text-slate-400 ml-1">Apply to open brand deals</span></span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-6 h-6 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
-                            <span class="text-sm font-bold text-slate-200">Live Media Kit: <span class="font-normal text-slate-400 ml-1">Real-time stats</span></span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-6 h-6 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                            <span class="text-sm font-bold text-slate-200">Automatic Negotiation：<span class="font-normal text-slate-400 ml-1">24/7 AI Agent supports</span></span>
-                        </li>
-                    </ul>
-
-                    <div class="mt-auto">
-                        <a href="https://forms.gle/1JaXL6ALRoAxv6ns8" class="w-full py-4 bg-white text-black rounded-2xl font-extrabold text-lg flex items-center justify-center space-x-2 hover:bg-gray-100 transition active:scale-95 inline-block">
-                            <span>Start 14-Day Free Trial</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                        <p class="text-center text-slate-500 text-xs mt-4">No credit card required for trial.</p>
+                            <p class="text-slate-400 text-sm h-10 flex items-center border-b border-slate-800 w-full">Scale your business and exposure.</p>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start min-h-[45px]">
+                                <span class="text-[15px] font-bold text-[#7c4dff] leading-snug">Everything you have as a Starter, plus:</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-[#7c4dff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                <span class="text-[14px] text-slate-200 leading-snug"><span class="font-bold text-white">7:3 Upsell Split:</span> Keep 70% of all extra value won by AI.</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-[#7c4dff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                <span class="text-[14px] text-slate-200 leading-snug"><span class="font-bold text-white">Brand Plaza:</span> Directly apply to open brand deals.</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-[#7c4dff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                <span class="text-[14px] text-slate-200 leading-snug"><span class="font-bold text-white">Priority Placement:</span> Featured visibility in brand search results.</span>
+                            </li>
+                            <li class="flex items-start space-x-4 min-h-[45px]">
+                                <svg class="w-5 h-5 text-[#7c4dff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                <span class="text-[14px] text-slate-200 leading-snug"><span class="font-bold text-white">Live Media Kit:</span> Real-time, auto-updating stats and metrics.</span>
+                            </li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="#" class="w-full py-4 bg-white text-black rounded-2xl font-extrabold text-lg flex items-center justify-center space-x-2 hover:bg-gray-100 transition">
+                                <span>Start 14-Day Free Trial</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                            <p class="text-center text-slate-500 text-[11px] mt-4">No credit card required for trial.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
             <!-- ================= Code Section ================= -->
             <div class="mt-16">
                 <section id="code-section" class="relative w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#2e1065] via-[#1e1b4b] to-[#172554] shadow-2xl">
